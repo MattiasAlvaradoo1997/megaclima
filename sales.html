@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Regitro de ventas | MEGACLIMA</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/sweetalert2.css">
+	<link rel="stylesheet" href="css/material.min.css">
+	<link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+	<script src="js/material.min.js" ></script>
+	<script src="js/sweetalert2.min.js" ></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js" ></script>
+	<script src="js/main.js" ></script>
+	<script src="js/misc.js" ></script>
+	<link href="assets/icons/favicon.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
+</head>
+<body>
+	<!-- navLateral -->
+	<section class="full-width navLateral">
+		<div class="full-width navLateral-bg btn-menu"></div>
+		<div class="full-width navLateral-body">
+			<div>
+				<img src="assets/img/logo.png" class="img-responsive">
+			</div>
+			<nav class="full-width">
+				<ul class="full-width list-unstyle menu-principal">
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<a href="#!" class="full-width btn-subMenu">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-view-dashboard"></i>
+							</div>
+							<div class="navLateral-body-cr">
+								VENTAS
+							</div>
+							<span class="zmdi zmdi-chevron-left"></span>
+						</a>
+						<ul class="full-width menu-principal sub-menu-options">
+							<li class="full-width">
+								<a href="#" class="full-width">
+									<div class="navLateral-body-cl">
+										<i class="zmdi zmdi-shopping-cart"></i>
+									</div>
+									<div class="navLateral-body-cr">
+										Registro de ventas
+									</div>
+								</a>
+							</li>
+							<li class="full-width">
+								<a href="cotizacion.html" class="full-width">
+									<div class="navLateral-body-cl">
+										<i class="zmdi zmdi-book"></i>
+									</div>
+									<div class="navLateral-body-cr">
+										Generar cotización
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<a href="inventory.html" class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-store"></i>
+							</div>
+							<div class="navLateral-body-cr">
+								INVENTARIO
+							</div>
+						</a>
+					</li>
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<a href="http://www.megaclima.cl/" target="_blank" class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-home"></i>
+							</div>
+							<div class="navLateral-body-cr">
+								IR A LA PÁGINA PRINCIPAL
+							</div>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+	<!-- pageContent -->
+	<section class="full-width pageContent">
+		<!-- navBar -->
+		<div class="full-width navBar">
+			<div class="full-width navBar-options">
+				<i class="zmdi zmdi-swap btn-menu" id="btn-menu"></i>	
+				<div class="mdl-tooltip" for="btn-menu">Ocultar / Mostrar menú</div>
+				<nav class="navBar-options-list">
+					<ul class="list-unstyle">
+						<li class="btn-exit" id="btn-exit">
+							<i class="zmdi zmdi-power"></i>
+							<div class="mdl-tooltip" for="btn-exit">LogOut</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<section class="full-width header-well">
+			<div class="full-width header-well-icon">
+				<i class="zmdi zmdi-shopping-cart"></i>
+			</div>
+			<div class="full-width header-well-text">
+				<p>
+					Registro de Ventas
+				</p>
+			</div>
+		</section>
+		<div class="full-width divider-menu-h"></div>
+		<div class="mdl-grid">
+			<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--12-col-desktop">
+				<div>
+					<p>
+						Filtrar
+					</p>
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th>
+								<label>Fecha: <input type="date" name="fecha" style="display: block;"></label>
+							</th>
+							<th>
+								<label>Nombre: <input type="text" name="nombre" placeholder="Nombre" style="display: block;"></label>
+							</th>
+							<th>
+								<label>RUT: <input type="text" name="rut" placeholder="RUT" value="" onkeyup="this.value=Restriccion(this.value)" style="display: block;"></label>
+							</th>
+							<th>
+								<label>Teléfono: <input type="text" name="fono" placeholder="912345678" style="display: block;"></label>
+							</th>
+							<th>
+								<label>Correo electrónico: <input type="text" name="mail" placeholder="ejemplo@correo.com" style="display: block;"></label>
+							</th>
+						</tr>
+					</thead>
+					<thead>
+						<tr>
+							<th>
+								<label>Producto/Servicio: <input type="text" name="producto" placeholder="Producto" style="display: block;"></label>
+							</th>
+							<th>
+								<label>Valor: <input type="number" name="valor" placeholder="$" style="display: block;" style="display: block;"></label>
+							</th>
+							<th>
+								<label>Descripción: <input type="text" name="descripcion" placeholder="Descripción" style="display: block;"></label>
+							</th>
+							<th>
+								<label>Número Folio: <input type="number" name="folio" placeholder="0000" style="display: block;"></label>
+							</th>
+							<th>
+							</th>
+							<th>
+								<a href="products.html" target="_blank" onclick="window.open(this.href, this.target, 'width=400,height=400'); return false;"><button>Ingresar nuevo registro</button></a>
+							</th>
+						</tr>
+					</thead>
+				</table>
+				<div class="table-responsive">
+					<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp full-width table-responsive">
+						<thead>
+							<tr>
+								<th class="mdl-data-table__cell--non-numeric">Fecha</th>
+								<th>Nombre cliente</th>
+								<th>RUT</th>
+								<th>Teléfono</th>
+								<th>Correo Electrónico</th>
+								<th>Producto</th>
+								<th>Valor Pagado</th>
+								<th>Descripción</th>
+								<th>Nº Folio</th>
+								<th>Opciones</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">11/04/2016</td>
+								<td>Client name</td>
+								<td>12.345.678-9</td>
+								<td>+56 9 4156 5412</td>
+								<td>utem@utem.cl</td>
+								<td>Martillo</td>
+								<td>$299.990</td>
+								<td><a href="http://www.forosdelweb.com/f4/como-abrir-ventana-nueva-pequena-pinchar-enlace-1035579/#post4362645" target="_blank" onclick="window.open(this.href, this.target, 'width=400,height=400'); return false;"><button>Ver</button></a></td>
+								<td>00001</td>
+								<td><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-more"></i></button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
